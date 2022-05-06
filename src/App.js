@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import InputForm from './input-form/input-form';
+import Canvas from './canvas/canvas';
 
 function App() {
+  const [x, setX] = useState([]);
+  const [functionY, setFunctionY] = useState([]);
+  const [fourierY, setFourierY] = useState([]);
+
+  const receiveCanvasData = (x, firstY, secondY) => {
+    setX(x);
+    setFunctionY(firstY);
+    setFourierY(secondY);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='app'>
+      <InputForm receiveData={receiveCanvasData}></InputForm>
+      <Canvas x={x} funcY={functionY} fourY={fourierY} ></Canvas>
     </div>
   );
 }

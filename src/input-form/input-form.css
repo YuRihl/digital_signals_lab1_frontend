@@ -1,0 +1,41 @@
+.form-item-container {
+    width: 30rem;
+
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem;
+
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+}
+
+.form-item {
+    width: 8rem;
+    text-align: center;
+}
+
+input.form-item {
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+
+    padding: 0.5rem 0;
+}
+
+#form-button {
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    background-color: white;
+
+    padding: 0.7rem 2.4rem;
+
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+#from, #iterations, #precision {
+    margin: 0 1rem;
+}
+
+#form-button:hover {
+    background-color: rgb(226, 223, 223);
+}
